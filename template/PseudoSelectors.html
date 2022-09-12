@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+        }
+        /* div {
+            width: 200px;
+            height: 150px;
+            background-color: blanchedalmond;
+            position: relative;
+            border-radius: 1em;
+            
+        }
+        div:first-child{
+            /* background-color: tomato; 
+        }*/
+        div:nth-child(2){
+            background-color: aqua;
+        }
+        span{color: tomato; background-color: greenyellow; margin: 0px 10px; border-radius: 1em;
+
+        }
+        div>span {
+            color: teal; text-decoration: underline;
+        }
+
+        span ~ p {
+             text-decoration: underline; 
+        }
+        p>span {
+            color: white;
+            text-decoration: none; 
+        } */
+        /* span:nth-child(3n+1){background-color: blueviolet;} */
+        input {
+            border: 1px solid wheat;
+        }
+        input:required {
+            border-color: tomato; 
+        }
+        input[type="password"] {
+            background-color:  thistle;
+        }
+        input[placeholder="username"] {
+            background-color: oldlace;
+        }
+        input[placeholder~="name"] {
+            background-color: goldenrod;
+        }
+
+        button:focus {
+            background-color: hotpink;
+        }
+        input:focus {
+            background-color: hotpink;
+        }
+        a:visited {
+            color: hotpink;
+        }
+        a:hover {
+            color: pink;
+        }
+        a:focus {
+            color : red;
+        }
+        form {
+            border : 1px solid salmon;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        form:focus-within{
+            border-color: seagreen;
+        }
+        form:hover input:focus{
+            background-color: sienna;
+        }
+        input::placeholder{
+            color: yellow;
+        }
+
+        p::first-letter {
+            font-size: 100px;
+        }
+        p::selection {
+            background-color: black;
+            color: aqua;
+        }
+        :root {
+            --main-color: #c7a81e;
+            --default-border : 1px solid black;
+        }
+        p {
+            background-color: var(--main-color);
+            border: var(--default-border);
+        }
+    </style>
+</head>
+    <body>
+        <p>ttttttttteeeeeeeeeeeeesssssssssssstttttttt</p>
+
+
+        <!-- <form>
+            <input type="text" placeholder="Name"/>
+        </form> -->
+
+
+
+        <!-- <div>
+            <button>Go To Hell</button>
+            <a href="https://apple.com">apple</a>
+        </div>
+        <form>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </form> -->
+
+
+        <!-- <div>
+            <span>Flower</span>
+            <address>hi</address>
+            <p>
+                My Casablanca sweetheart
+                Nectar so divine
+                Baby, you're the best part of  <span>my life</span>
+            </p>
+        </div>
+        <form>
+            <input type="text" placeholder="username">
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+            <input type="password" placeholder="password" required>
+
+        </form> -->
+
+
+    <!-- <div></div>
+    <div></div>
+    <div></div>
+    <span>H</span>
+    <span>E</span>
+    <span>L</span>
+    <span>L</span>
+    <span>O</span>
+    <span>H</span>
+    <span>I</span> -->
+
+</body>
+</html>
+
+
+
+
+<!--Pseudo Selectors part 1
+Pseudo Selectors
+좀더 세부적으로 엘리먼트를 선택해 주는 것!
+(기존 방법 : 태그, id w/#, class w/.)
+
+선택의 복잡한 과정을 pseudo selector로 가능함
+ex>
+div:first-child {
+background-color: tomato;
+}
+
+/* pseudo selector */
+div:last-child {
+background-color: teal;
+}
+id나 class를 따로 만드는것보다 이렇게 지정하는게 훨씬 좋은 방법이다.
+css에서만 선택을 하면 되니까! html코드를 고칠 필요가 없기 때문이다
+
+n번째 태그 수정하기 nth-child(n) 올ㅋ
+span:nth-child(2) {
+background-color: teal;
+}
+span:nth-child(even) { //or odd ( 홀수 )
+background-color: teal;
+}
+
+even은 짝수! 짝수번째를 모두 바꿀 수있다 오 so cool !
+
+
+span:nth-child(5n + 1) {
+background-color: silver;
+}
+n을 사용하면 매우 편하다
+주의할 점!! child를 사용할 때 그것이 해당하는 것에 div span이 같은 열에 있다면
+그것들을 모두 포함해서 순서를 매기기에 div div span에서 div:last-child를 쓴다면
+last는 span이라 안먹힘!!!
+
+++++++++++++++++++ Combinators +++++++++++++++++++++
+## selector들을 combine 한다
+ @@div의 바로 밑 자식에서 span을 찾아서 그것만 효과를 주는 방법
+1)
+div span {
+text-decoration : underline;
+}
+이렇게하면 div밑에 있는 모든 span이 효과를 가진다
+직접적인 부모가 아니어도 밑에있는 것들을 모두 css가 찾는다.
+
+2) div > span {
+text-decoration : underline;
+}
+이렇게하면 바로 밑!!! 을 찾게 되므로 바로 밑의 자식만 건들일수있게된다.
+
+@@ 형제에게 효과를 주는방법
+p + span {
+color: black;
+}
++ 를 사용하면 형제에게 영향을 끼칠 수 있다. cool
+> 를 사용하면 direct child를 찾고, + 를 사용하면 바로 코드상 밑에 있는 sibling을 찾게된다.
+
+부모 자식 {} → 부모의 inside
+부모 > 바로 밑 자식 {} → 부모의 under
+비슷한 A1 + A2 {} → A1의 next
+-->
+
+<!--Pseudo Selectors part 2
+*= is 'contains'
+~ = is 'exactly'
+
+~는 독자적인 단어, 어구 "name"을 잡아주는 것이고
+*는 어떤 문장이든 name를 포함하고 있으면 다 선택이 되는거군요.
+~="name" -> ex) first name, last name 등등
+*="name" -> ex) rename, ringname, asdfajsnameadsfasdf 등등.
+
+:optional 속성이 설정 되지 않은 모든 , 또는 요소를 나타냅니다
+https://developer.mozilla.org/en-US/docs/Web/CSS/:optional
+
+tag[attribute = "vallue"] : 속성의 값이 "vallue"인 태그를 모두적용
+tag[attribute ~= "vallue"] : 앞뒤에 공백이 있는 상태에서 "vallue" 값을 포함한 모든 tag 적용
+tag[attribute *= "vallue"] : 앞뒤 공백 상관없이 "vallue" 값을 포함한 모든 tag 적용
+그외
+tag: required {} required 속성을 가지고있는tag
+(필수적인)
+tag: optional {} required 속성이 없는
+-->
+
+<!--States
+states
+1) active : 대상을 클릭하고 있는 상태
+2) hover : 마우스가 대상 위에 있을때의 상태
+3) focus : active와 비슷하다고 생각될 수 있는데, 키보드로 선택되었을때를 말한다 !
+4) visited : 링크에만 적용 된다. 그 링크에 방문했다면 그 안에 스타일이 적용이된다.
+5) focus-within : focuse된 자식을 가진 부모 엘리먼트의 상태를 말한다
+즉, 위의 예시에서 form은 그 자식들인 input이 focuse가 되면 form의 모습을 바꾼다는 것이다
+
+
+state들을 다른 엘리먼트와 연계해서 사용할 수도 있다
+1) 부모의 state에 따라 조정
+form:hover input {
+background-color: slateblue;
+}
+즉, form이 hover일경우 input의 백그라운드 컬러가 바뀌게된다
+부모의 state에 따라 자식의 state를 조정할 수 있다
+2) 부모와 자식의 state에 따라 조정
+form:hover input:focus {
+background-color: teal;
+}
+이렇게도 supercool하게 사용가능도 하다!
+-->
+
+<!--Recaps
+    ★ 처음부터 다 기억할 필요는 없고, 니코쌤은 그저 태그들을 몇 개 보여주시는 것 뿐이라고 하십니다.
+연습하면서 기억할 수 있게 될테니까 걱정하지 마시라고 하네요! :)
+
+본 영상에서 앞 부분에 잠깐 나온 pseudo element들은 :(콜론)이 2개인 게 특징입니다.
+1) :: placeholder (0:46)
+: placeholder의 특성만 바꾸고 싶을 때 사용합니다.
+
+2) :: selection (1:31)
+: 클릭해서 긁을 때(1:58) 발생합니다.
+
+3) :: first-letter
+: 첫 글자에만 적용됩니다.
+
+4) ::first-line
+: 첫 줄에만 작용합니다.
+
+-->
+
+
+<!-- Colors and Variables
+@@ Color
+color는 정말 css 에서중요하다
+css에서 알아야할 color system
+1) hexadecimal color (16진수 컬러)
+#000000 <
+2)RGB 방식
+-> 이건 디자이너들이 많이쓴다
+rgb(252,206,0); 이런식
+rgba (205,23,0, 0.5);
+4번째 숫자는 투명도를 말한다 !
+a 즉 알파는 투명도를 말하는 것이다
+
+@@Variable (custom properties )
+
+variable도 정말 중요하다 !!!
+이게 css를 프로그래밍언어처럼 보여준다
+프로그래밍언어는아니지만 그 장점을 보여주는것임
+
+:root 라는 엘리먼트에 변수를 추가하는 것이다
+:root은 기본적으로 모든 document의 뿌리가 되는 것이다
+출발점이 되는 것이다
+여기에 변수이름을 쓰고
+--main-color라고 변수이름을 주고
+이것을 document의 root에 저장하는것이다
+
+--를 써주고 변수이름을 써줘야한다
+변수는 -- 2개 그리고 변수이름
+빈공간이 있다면 -로 채워야한다.
+물론 컬러만 저장할 수 있는게 아니다!
+--default-border: 1px solde var(--main-color);
+
+
+그 다음 이 변수를 사용할 곳에
+p {
+background-color: var(--main-color);
+}
+a {
+background-color: var(--main-color);
+}
+이렇게 써주면됨!! how it is cool! 
+
+
+-->

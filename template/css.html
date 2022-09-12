@@ -1,0 +1,229 @@
+<!-- 
+    CSS와 HTML을 섞는 방법
+1. 같은 HTML 파일에 HTML, CSS 코드를 놓는 방법
+   head tag 안에 style tag를 작성한다. 
+<head>
+    <style>
+        css
+    </style>
+</head>
+-->
+
+   <!--
+2. CSS와 HTMl을 분리시키는 방법(추천)
+   ink tag를 이용해 style.css와 연결하고 rel을 이용해 관계를 적어준다. 
+-->
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME - My second website.</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <style>
+        html{
+            background-color: rgb(235, 148, 132);
+        }
+        * {
+            border: 1px dashed black ;
+        }
+        /* body {
+            margin:0;
+    background-color: rgb(161, 221, 161);
+} */
+        h1 {
+            color : rgb(23, 145, 78);
+            text-decoration: overline underline;
+            font-weight: 900;
+            font-size: 40px;
+            font-style: italic;
+        }
+        address {
+            font-style: italic;
+            font-size: 15px;
+            text-align: center;
+            color: brown;
+            font-weight: bolder;
+        }
+        div {
+
+            /* margin: 50px 30px; */
+            height: 150px;
+            width: 150px;
+            background-color: rgb(255, 255, 255);
+            font-size: 20px;
+            border: 2px solid black;
+            padding: 10px;
+
+        }
+        #first {
+            background-color: black;
+            height: 100px;
+            width: 100px;
+        }
+        #second {
+            background-color: aqua;
+            height: 50px;
+            width: 50px;
+        }
+        #third {
+            background-color: brown;
+            height: 50px;
+            width: 50px;
+            border-radius: 2em;
+        }
+        span {
+            background-color: turquoise;
+            display: block;
+        }
+        img {
+            width: 100px;
+            height: 150px;
+        }
+        p {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TEST</h1>
+    </header>
+    <p>
+        <h2>The JUN Times</h2>
+    </p>
+    <main>
+        <address>123 Road</address>
+    </main>
+
+<!-- 
+- CSS가 하는 일은 HTML 태그를 가리키는 일. (이 태그는 초록색이다. 이 가리키는 것 자체를 'selector'
+- CSS 작성에선 띄어쓰기를 하지 않는다.
+- font-size:20px; 과 같이, 속성 다음 콜론(:), 값 다음 세미콜론(;)으로 닫아줘야 한다.
+
+속성이름:속성값;
+
+- 밑줄(_) 또는 슬래쉬(/)도 사용해선 안된다.
+- css 또한 어떤 값이든 쓸 수 있다. 하지만 속성에 맞는 값을 써야 브라우저에서 적용이 된다.
+- css 또한 모든 속성을 일일이 다 기억할 필요 없다. 기본적으로 어떻게 동작하는지만 기억하면 된다.
+
+동작 원리
+1. 태그를 지정
+2. 원하는 속성값을 쓴다.
+ -->
+    <div>1</div>
+    <div id="first">
+        <div id="second">
+            <div id="third">
+                1
+            </div>
+        </div>
+    </div>
+
+    <span>helo</span>
+    <span>hi</span>
+
+    <a href="#">link</a>
+    <a href="#">link</a>
+    <p>A</p>
+    <p>B</p>
+    <img src="bloob.jpg"/>
+    <img src="bloob.jpg"/>
+
+
+<!-- block inline
+ box (block) : div, p, address, blockquote
+non-box (inline) : span, a(link), img, code (작은 글, 링크, 이미지)등 외에는 거의다 blocks로 존재
+ -->
+
+
+
+<!-- Margin part 1
+ ### Block의 특징(margin, padding, border)
+
+ block에서 inline으로 inline에서 block으로 바꾸는게 가능할까? → 가능하다
+ 
+ 이렇게 하는 걸 display 속성이라고 한다.
+ 
+ 기본적으로 span의 display 속성은 inline이다. 이걸 block으로 바꿔주면 span도 block이 된다.
+ 
+ 그렇다면 div를 inline으로 바꾸면 어떤 일이 일어날까? → div가 사라진다.
+ 
+ 이유는 어떤 요소가 inline이면 그 요소는 높이와 너비를 가질 수 없기 때문이다.
+ 
+ 높이와 너비가 없고 내용도 없기 때문에 사라져 보인다. 내용이 있으면 그 내용만큼의 크기를 가지고 보여지게 된다.
+ 
+ inline은 높이와 너비가 없고, block은 높이와 너비가 있다.
+ 
+ block의 엄청난 특징 3가지는 다음과 같다.
+ 
+ 브라우저는 요소들에게 원치 않아도 많은 style 속성을 준다.
+ 
+ user agent stylesheet : 브라우저가 기본적으로 준 style 속성
+ 
+ 1. **margin : box의 border의 바깥에 있는 공간**
+ 2. padding
+ 3. border
+ -->
+<!-- 
+ margin-top: a;
+ margin-right: b;
+ margin-bottom: c;
+ margin-left: d;
+ 
+ 를 합쳐서  margin: a b c d; 하셔도 순서대로 적용 됩니다.
+ -->
+
+ <!-- Margin part 2
+방향 설정 없이 margin 하나를 주면 사방에 전부 다 적용된다.
+두 개를 줄 경우 상하, 좌우 이다.
+네 개를 줄 경우 시계방향 순으로 적용된다. (상 우 하 좌)
+Collapsing margin 현상 (상하에서만 발생함)
+body안에 div의 위 아래 마진이
+body의 마진과 만나면 둘 중 큰 값의 마진으로 body에 적용된다
+
+div의 마진이 body의 마진을 넘어설 때 collapsing margin 위 아래에서만 일어남
+
+++  Paddings and IDs
+- padding은 margin과 반대 개념이다.
+- padding은 box의 경계로부터 '안쪽'에 있는 공간이다.
+- 값의 개수에 따라 적용되는 방향은 margin과 동일하다.
+- 여러 div를 생성했을 때 'id'를 이용하여 div들을 구분할 수 있고, 각각 다른 속성을 적용시킬 수 있다.
+- CSS로 first div에 속성을 적용 시킬 땐, #first {}
+- 이는 body, span 등에서도 마찬가지다.
+- CSS 코드의 id명은 HTML 코드에서 썼던 id명과 같아야 한다.
+
+++ Borders
+border는 box의 경계이다.
+border는 보통 한 종류만 사용한다.
+*는 전체를 뜻한다.
+border : 굵기, 스타일, 색상 순이다.
+border은 inline과 block 모두에 적용
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
