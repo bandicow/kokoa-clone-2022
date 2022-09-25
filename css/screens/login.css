@@ -35,12 +35,12 @@ body {
 
 /* input type이 submit이 아닌 경우에만 적용 */
 #login-form input:not([type="submit"]) {
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid var(--gray);
     transition: border-color 0.3s ease-in-out;
 }
 
 #login-form input::placeholder {
-    color: rgba(0,0,0,0.4)
+    color: var(--gray);
 }
 #login-form input:focus {
     border-color:  var(--yellow);

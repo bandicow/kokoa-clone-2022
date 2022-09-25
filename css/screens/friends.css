@@ -1,0 +1,40 @@
+#friends-display-link {
+    text-align: center;
+    display: block;
+    /* display: flex;
+    justify-content: center; */
+    width: 100%;
+    background-color: #FAFAFA;
+    padding: 10px 0px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+#friends-display-link i {
+    color: rgba(0,0,0,0.3);
+}
+
+/* .friend-screen {
+    padding: 10px var(--horizontal-space);
+} 
+이거 main-screen을 대체*/
+
+
+.friends-screen__channel-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.friends__channel {
+    margin-top: 15px;
+    border-top: var(--main-border);
+    padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
