@@ -1,0 +1,15 @@
+#chat-screen {
+    background-color: #abc1d1;
+}
+
+.chat-timestamp {
+    border-radius: 10px;
+    background-color: var(--lightgray);
+    color: white;
+    display: block;
+    width: 150px;
+    height: 25px;
+    font-size: 10px;
+    text-align: center;
+    text-;
+}
