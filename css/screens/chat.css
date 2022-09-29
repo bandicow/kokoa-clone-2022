@@ -77,3 +77,70 @@
     .message-row--own .message__time {
         margin-right: 8px;
     }
+
+.reply {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    padding: 5px 25px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.reply .reply_column:first-child {
+    width:7%;
+}
+
+.reply .reply_column:last-child {
+    width: 93%;
+    position: relative;
+}
+
+.reply input {
+    /* height: 28px;  */
+    width: 100%;
+    border-radius: 15px;
+    border: var(--main-border);
+    padding: 7px;
+}
+
+
+.reply_column:last-child > i,
+.reply_button {
+    position: absolute;
+    right: -10px;
+    top: 3px;
+
+}
+
+.reply_column:last-child > i {
+    right: 25px;
+    top: 15px;
+}
+
+
+.reply_button {
+    background-color: var(--yellow);
+    border-radius: 15px;
+    border: none;
+    width: 26px;
+    height: 26px;
+}
+
+
+.reply__column button:focus,
+.reply__column button:active {
+    outline: none;
+}
+
+.reply i {
+    opacity: 0.7;
+}
+
+.reply button i {
+    opacity: 1;
+}
+
