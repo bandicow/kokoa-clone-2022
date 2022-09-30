@@ -55,3 +55,20 @@
 /* width , height 가 바로 적용 안되는 이유 : span은 inline이라 적용이 되지 않기에 display : block나 flex으로  */
 /* position : absolute를 쓰면 position:relative를 가진 부모를 기준으로 움직임 없으면 body로 감*/
 
+@keyframes notificationAnimation {
+    0% {
+
+    }
+    50% {
+
+    }
+
+    100% {
+
+    }
+
+}
+
+
+
+
