@@ -12,6 +12,7 @@
 @import "components/badge.css";
 @import "components/icon-raw.css";
 @import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
 /* Screens */
 @import "screens/login.css";
 @import "screens/friends.css";
@@ -24,7 +25,7 @@
 
 body {
     font-family: 'Noto Sans KR','Open Sans',sans-serif ,'DotGothic16','Yellowtail', cursive,-apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 120vh;
+    height: 100vh;
     color: #2e363e;
     }
 
@@ -90,6 +91,7 @@ body {
     padding: 10px var(--horizontal-space);
 }
 
-
-
-
+/* 임시
+.main-chat {
+    display: none;
+  } */
