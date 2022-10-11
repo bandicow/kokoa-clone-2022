@@ -1,0 +1,37 @@
+body {
+    background-color: #FF6347;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mother_box {
+    display: flex;
+    background-color: #F5DEB3;
+    width: 280px;
+    height: 280px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+/*     margin: auto;  이걸로도 위치 중앙가능*/
+    border: 3px solid black;
+}
+
+.color {
+    border: 4px;
+    background-color: #008080;
+}
+
+.solid {
+    border: solid white;
+    height: 60px;
+    width: 60px;
+}
+
+.dashed {
+    border: dashed white;
+    margin: 20px;
+    height: 60px;
+    width: 230px;
+}

@@ -1,37 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+
+
 body {
-    background-color: #FF6347;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #F5F5F5;
+    margin: 50px;
+    font-size: 20px;
+    font-family: 'Noto Serif', serif;
+    letter-spacing : -2px;
+} 
+
+.title {
+    text-align: center;
 }
 
-.mother_box {
+.colors {
     display: flex;
-    background-color: #F5DEB3;
-    width: 280px;
-    height: 280px;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-/*     margin: auto;  이걸로도 위치 중앙가능*/
-    border: 3px solid black;
+    flex-wrap: wrap;
+    margin: 10px 100px;
 }
 
-.color {
-    border: 4px;
+.color_box {
+    width: 220px;
+    height: 380px;
+    margin: 20px 10px;
+    position: relative;
+    border: solid 6px white;
+}
+
+.color_box:first-child {
+    background-color: #ff6347;
+}
+
+.color_box:nth-child(2) {
     background-color: #008080;
 }
 
-.solid {
-    border: solid white;
-    height: 60px;
-    width: 60px;
+.color_box:nth-child(3) {
+    background-color: #DEB887;
 }
 
-.dashed {
-    border: dashed white;
-    margin: 20px;
-    height: 60px;
-    width: 230px;
+.color_box:last-child {
+    background-color: #D7BFD7;
+}
+
+.color_box_name {
+    background-color: white;
+    position: absolute;
+    width: 95%;
+    top: 20px;
+    height: 130px;
+    font-size: 25px;
+    flex-wrap: wrap;
+    padding-left: 5%;
+}
+
+.color_box_name p:first-child {
+    margin-bottom: 0px;
+}
+
+.color_box_name p:last-child {
+    font-size: 20px;
 }
