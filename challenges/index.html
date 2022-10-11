@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create An Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Create An Account</h1>
+
+    <div>
+        <form id="create" method="get">
+            <div>
+                <label>
+                    First Name <input type="text" id="create__F_name" required placeholder="First name" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Last Name <input type="text" id="create__L_name" required placeholder="Last Name" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Email <input type="email" id="create__Email" required placeholder="Email" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Username <input type="text" id="create__User" placeholder="Username" required />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Password <input type="password" id="create__password" required minlength="10"
+                        placeholder="Password" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Birth Date <input type="date" required id="create__BD" placeholder="yyyy/mm/dd" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    How happy are you? <input type="range" list="steplist" required id="create__happy"/>
+                    <datalist id="steplist">
+                        <option>0</option>
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                        <option>50</option>
+                        <option>60</option>
+                        <option>70</option>
+                        <option>80</option>
+                        <option>90</option>
+                        <option>100</option>
+                            
+                    </datalist>
+                </label>
+            </div>
+            <div>
+                <label>
+                    What is your fav. color? <input type="color" required id="create__color"/>
+                </label>
+            </div>
+
+            <input type="submit" value="Create Account"></input>
+        </form>
+    </div>
+</body>
+
+</html>
