@@ -1,0 +1,54 @@
+.music_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.music_list__wait {
+    margin: 26px 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.music_list__wait__color {
+    height: 60px;
+    width: 60px;
+    border: solid 2px black;
+    border-radius: 20%;
+    background-color: magenta;
+    margin-right: 15px;
+}
+
+.music_list__wait__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.music_list__wait__text--lg {
+    font-size: 25px;
+    margin-bottom: 6px;
+}
+
+.music_list__wait__text--sm {
+    opacity: .6;
+}
+
+
+
+.red {
+    background-color: #F85A2A;
+}
+
+.pink {
+    background-color: #FF89BB;
+}
+
+.blue {
+    background-color: #1947E5;
+}
+
+
+.green {
+    background-color: #00C6AD;
+}

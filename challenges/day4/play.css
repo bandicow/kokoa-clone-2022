@@ -1,19 +1,18 @@
 .play {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .play__btn {
     display: flex;  
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 60px;
+    width: 190px;
+    height: 65px;
     border: solid 2px black;
     border-radius: 15px;
     border-bottom-width: 5px;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 24px;
 }
 
 .play__btn i {
@@ -30,7 +29,6 @@
     border-radius: 50%;
     border-bottom-width: 5px;
     font-size: 20px;
-    font-weight: 600;
 }
 
 .play__plus {
@@ -43,5 +41,4 @@
     border-radius: 50%;
     border-bottom-width: 5px;
     font-size: 20px;
-    font-weight: 600;
 }
