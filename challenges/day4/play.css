@@ -1,0 +1,47 @@
+.play {
+    display: flex;
+    justify-content: space-between;
+}
+
+.play__btn {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    border: solid 2px black;
+    border-radius: 15px;
+    border-bottom-width: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.play__btn i {
+    margin-right: 15px;
+}
+
+.play__heart {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: solid 2px black;
+    border-radius: 50%;
+    border-bottom-width: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.play__plus {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: solid 2px black;
+    border-radius: 50%;
+    border-bottom-width: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}

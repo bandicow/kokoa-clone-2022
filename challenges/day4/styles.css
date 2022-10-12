@@ -1,0 +1,39 @@
+@import "reset.css";
+@import "current.css";
+@import "play.css";
+
+body {
+    background-color: #00c6ad;
+    width: 100vw;
+    height: 100vh;
+    margin : 0;
+    padding : 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 98%;
+    height: 99%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.margin {
+    margin: 50px 50px;
+}
+
+.main header {
+    display: flex;
+    margin-top: 80px;
+    font-size: 30px;
+}
+
+.main__icon {
+    margin-left : 0px;
+    margin-right : 100px;
+}
+
