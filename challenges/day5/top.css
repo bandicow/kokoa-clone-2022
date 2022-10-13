@@ -1,0 +1,24 @@
+.top__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x:auto;
+    padding-left: 100px;
+}
+
+.top__list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.top__list__book img {
+    margin: 10px;
+    width: 110px;
+    height: 150px;
+    border-radius: 10px;
+
+}
+
+.top__list__book__text {
+    font-size: 10px;
+    margin-left: 30px;
+}

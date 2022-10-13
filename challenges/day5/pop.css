@@ -1,0 +1,24 @@
+.pop {
+    margin-left: 20px;
+    display: flex;
+}
+
+.pop__img img {
+    height: 140px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+.pop__text {
+    margin-left: 20px;
+}
+
+.pop__text__name {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pop__text__desc {
+    opacity: .3;
+}
