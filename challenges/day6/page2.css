@@ -1,0 +1,77 @@
+.app2__play img{
+    margin: 50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 40px pink;
+}
+
+.app2__playbar {
+    width: 300px;
+}
+
+.app2__playbar__time {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.app2__playbar__time span {
+    font-size: 12px;
+    opacity: .3;
+}
+
+.app2__playbar__bar {
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 10px;
+    position: relative;
+}
+
+.app2__playbar__bar--total {
+    width: 300px;
+    height: 5px;
+    background-color: rgba(190, 177, 177, 0.4);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.app2__playbar__bar--dot {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: 148px;
+    top : -3px;
+    z-index: 2;
+}
+
+.app2__playbar__bar--current {
+    width: 150px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 1;
+}
+
+.app2__controlbox {
+    margin-top: 70px;
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app2__controlbox i:first-child,
+.app2__controlbox i:last-child {
+    opacity: 0.3;
+}
+
+
+
+
+
+
+

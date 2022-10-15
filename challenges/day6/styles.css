@@ -1,0 +1,46 @@
+@import "reset.css";
+@import "page1-play.css";
+@import "page1-list.css";
+@import "page1-controlbox.css";
+@import "page2.css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+
+body {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F4F6;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+.main {
+    display: flex;  
+    width: 900px;
+    height: 900px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.app {
+    display:flex;
+    width: 350px;
+    height: 750px;
+    border-radius: 4%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.app__top {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-top: 40px;
+
+}
